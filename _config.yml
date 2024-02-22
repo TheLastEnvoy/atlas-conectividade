@@ -1,7 +1,7 @@
 # Site settings
 title: Connectivity Atlas | Development Seed
-baseurl: ""
-url: "https://atlas.developmentseed.org"
+baseurl: "connectivity-atlas"
+url: "https://developmentseed.org"
 
 # Build settings
 markdown: kramdown
