@@ -1,6 +1,6 @@
 # Site settings
 title: Connectivity Atlas | Development Seed
-baseurl: ""
+baseurl: "/connectivity-atlas"
 url: "https://developmentseed.org"
 
 # Build settings
