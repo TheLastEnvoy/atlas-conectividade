@@ -65,7 +65,7 @@ $(document).ready(function() {
 
                 if (id !== undefined) {
                      $('#features').show();
-                    document.getElementById('features').innerHTML = title + '<br><a class="btn btn-primary" href="{{ site.baseurl }}/source/' + id + '">View source</a>';
+                    document.getElementById('features').innerHTML = title + '<br><a class="btn btn-primary" href="{{ site.baseurl }}' + id + '">View source</a>';
                 }
 
 
