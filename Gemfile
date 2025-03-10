@@ -1,7 +1,11 @@
 source 'https://rubygems.org'
 
-require 'json'
-require 'open-uri'
-versions = JSON.parse(open('https://pages.github.com/versions.json').read)
+# Versão mais recente do GitHub Pages
+gem 'github-pages', group: :jekyll_plugins
+gem 'jekyll'
 
-gem 'github-pages', versions['github-pages']
+# Gems necessárias para compatibilidade
+gem 'webrick'
+
+# Especificar alternativas para gems problemáticas
+gem 'kramdown-parser-gfm'
