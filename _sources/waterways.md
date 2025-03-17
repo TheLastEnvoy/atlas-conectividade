@@ -1,5 +1,5 @@
 ---
-title: Mexico waterways
+title: Hidrovias do México
 attribution: Natural Earth
 attribution-url: http://www.naturalearthdata.com/downloads/
 id: waterways

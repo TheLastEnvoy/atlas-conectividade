@@ -1,4 +1,5 @@
 ---
-name: Show All
+layout: theme
+name: Todos
 themes: all
 ---

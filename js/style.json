@@ -11,7 +11,7 @@
       "themes": "{{ source.themes}}",
       "type": "vector",
       "url": "{{ source.source-url }}"
-    }{% if forloop.index != forloop.length - 1 %},{% endif %}
+    }{% assign last_index = forloop.length | minus: 1 %}{% if forloop.index0 != last_index %},{% endif %}
   {% endfor %}
   },
   "sprite": "https://www.mapbox.com/mapbox-gl-styles/sprites/outdoors",
@@ -30,24 +30,32 @@
       "type": "line",
       "paint": {
         "line-color": "{{ source.line-color }}",
-        "line-width": {{ source.line-width }}
+        "line-width": {{ source.line-width }}{% if source.line-opacity %},
+        "line-opacity": {{ source.line-opacity }}{% endif %}
       }
-      {% elsif source.tags contains 'fill' %}
+      {% elsif source.tags contains 'fill' or source.tags contains 'polygon' %}
       "type": "fill",
       "paint": {
         "fill-color": "{{ source.fill-color }}",
         "fill-opacity": {{ source.fill-opacity }}
       }
-      {% elsif source.tags contains 'symbol' %}
+      {% elsif source.tags contains 'symbol' or source.tags contains 'point' %}
       "type": "symbol",
       "layout": {
-        "icon-image": "{{ source.icon-image }}"
-      },
+        "icon-image": "{{ source.icon-image }}"{% if source.icon-size %},
+        "icon-size": {{ source.icon-size }}{% endif %}
+      }{% if source.icon-opacity %},
       "paint": {
-        "icon-opacity": "{{ source.icon-opacity }}"
+        "icon-opacity": {{ source.icon-opacity }}
+      }{% endif %}
+      {% else %}
+      "type": "line",
+      "paint": {
+        "line-color": "#000000",
+        "line-width": 0.5
       }
       {% endif %}
-    }{% if forloop.index != forloop.length - 1 %},{% endif %}
+    }{% assign last_index = forloop.length | minus: 1 %}{% if forloop.index0 != last_index %},{% endif %}
   {% endfor %}
   ]
 }

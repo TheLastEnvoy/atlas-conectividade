@@ -1,5 +1,5 @@
 ---
-title: Global Gas Pipelines
+title: Gasodutos Globais
 attribution: Enhanced from the Harvard CGA Oil Dataset
 attribution-url: http://maps.cga.harvard.edu/oil/
 id: global_gas

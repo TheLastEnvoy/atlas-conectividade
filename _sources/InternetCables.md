@@ -1,5 +1,5 @@
 ---
-title: Internet Cables
+title: Cabos de Internet
 attribution: Telegeography
 attribution-url: https://www.telegeography.com/telecom-resources/submarine-cable-map/index.html
 id: InternetCables

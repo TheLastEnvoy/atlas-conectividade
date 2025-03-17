@@ -1,13 +1,13 @@
-#Contribution guidelines
+#Diretrizes de contribuição
 
-## Contributing Data
-This is a collaborative data project. We rely on contributions of open data to be more complete and up-to-date.
+## Contribuindo com Dados
+Este é um projeto de dados colaborativo. Contamos com contribuições de dados abertos para sermos mais completos e atualizados.
 
-### Adding Data Sources
-If you know your way around github and Mapbox, you can contribute additional data directly. Maps are served via [mapbox-gl.js](https://github.com/mapbox/mapbox-gl-js/). Additional data sources can be added by creating an item in the Sources collection and updating the [YAML](http://jekyllrb.com/docs/frontmatter/) front matter.
-- Source filenames should match the id of the source.
-- Vector styles specific to the source should be included.
-- The source-url should be the location of the vector tile set.
+### Adicionando Fontes de Dados
+Se você conhece bem o GitHub e o Mapbox, pode contribuir com dados adicionais diretamente. Os mapas são servidos via [mapbox-gl.js](https://github.com/mapbox/mapbox-gl-js/). Fontes de dados adicionais podem ser adicionadas criando um item na coleção Sources e atualizando o front matter [YAML](http://jekyllrb.com/docs/frontmatter/).
+- Os nomes dos arquivos de origem devem corresponder ao ID da fonte.
+- Estilos vetoriais específicos para a fonte devem ser incluídos.
+- A source-url deve ser a localização do conjunto de tiles vetoriais.
 
 ```
 title: US Natural Gas
@@ -23,15 +23,15 @@ line-color: '#c7125a'
 line-width: 0.8
 ```
 
-### Suggesting data sources
-If you have data to contribute but can't add it directly, [create an issue](https://github.com/developmentseed/connectivity-atlas/issues) in the project repository with a link to the dataset and as much description as you can provide. Please tag the issues `data sources`.
+### Sugerindo fontes de dados
+Se você tem dados para contribuir, mas não pode adicioná-los diretamente, [crie uma issue](https://github.com/developmentseed/connectivity-atlas/issues) no repositório do projeto com um link para o conjunto de dados e o máximo de descrição possível. Por favor, rotule as issues como `data sources`.
 
-## Other ways to contribute
-There are many other ways to contribute to a project, below are some examples:
+## Outras formas de contribuir
+Existem muitas outras maneiras de contribuir para um projeto, abaixo estão alguns exemplos:
 
-- Report bugs, ideas, requests for features by [creating issues](https://github.com/developmentseed/connectivity-atlas/issues) in the project repository.
-- Fork the code and play with it, whether you later choose to make a pull request or not.
-- Create pull requests of changes that you think are laudatory. From typos to major design flaws, you will find a target-rich environment for improvements.
+- Relate bugs, ideias, solicitações de recursos [criando issues](https://github.com/developmentseed/connectivity-atlas/issues) no repositório do projeto.
+- Faça um fork do código e experimente-o, independentemente de você optar por fazer um pull request posteriormente ou não.
+- Crie pull requests de alterações que você acha que são louváveis. De erros de digitação a grandes falhas de design, você encontrará um ambiente rico em oportunidades para melhorias.
 
-## Style
-There is no set style for this project, but please try to match existing coding styles as closely as possible.
+## Estilo
+Não há um estilo definido para este projeto, mas tente combinar os estilos de codificação existentes o mais próximo possível.

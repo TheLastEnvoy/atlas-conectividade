@@ -1,37 +1,35 @@
 ---
 ---
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset=utf-8 />
     <title>{{site.title}}</title>
     <link rel='shortcut icon' href='{{site.baseurl}}/images/favicon.ico' type='image/x-icon' />
     <meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <meta name='description' content='Explore how global infrastructure links us all with the Connectivity Atlas.' />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <meta name='description' content='Explore como a infraestrutura global conecta todos nós com o Atlas de Conectividade.' />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.7.0/mapbox-gl.css' rel='stylesheet' />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet' />
     <link href='{{site.baseurl}}/css/style.css' rel='stylesheet' />
 
     <!-- Facebook meta tags -->
     <meta name="og:url" content="{{ site.url }}{{ site.baseurl }}" />
-    <meta name="og:title" content="Connectivity Atlas" />
-    <meta name="og:description" content="Explore how global infrastructure links us all with the Connectivity Atlas." />
+    <meta name="og:title" content="Atlas de Conectividade" />
+    <meta name="og:description" content="Explore como a infraestrutura global conecta todos nós com o Atlas de Conectividade." />
     <meta name="og:image" content="{{ site.url }}{{ site.baseurl }}/css/images/logo-fb.png" />
 
     <!-- Twitter card -->
     <meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:creator" content="@developmentseed">
-	<meta name="twitter:title" content="Connectivity Atlas">
-	<meta name="twitter:description" content="Explore how global infrastructure links us all with the Connectivity Atlas.">
+	<meta name="twitter:title" content="Atlas de Conectividade">
+	<meta name="twitter:description" content="Explore como a infraestrutura global conecta todos nós com o Atlas de Conectividade.">
     <meta name="twitter:image:src" content="{{ site.url }}{{ site.baseurl }}/css/images/logo-fb.png" />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.7.0/mapbox-gl.js'></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore.js"></script>
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.6/underscore-umd-min.js"></script>
     <script src="{{site.baseurl}}/js/utils.js"></script>
 
   </head>
@@ -43,56 +41,54 @@
   {% endif %}
   <body{% if vars.slug %} class="{{ vars.slug }}"{% endif %}>
 
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="{{site.baseurl}}/">Connectivity Atlas</a>
-    </div>
-
-	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-      <ul class="nav navbar-nav">
-        <li class="dropdown dropdown-sources">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Sources <span class="caret"></span></a>
-          <ul class="dropdown-menu menu-sources" role="menu">
+    <a class="navbar-brand" href="{{site.baseurl}}/">Atlas de Conectividade</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Alternar navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown dropdown-sources">
+          <a class="nav-link dropdown-toggle" href="#" id="fontesDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Fontes
+          </a>
+          <ul class="dropdown-menu menu-sources" aria-labelledby="fontesDrop">
           </ul>
         </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Themes <span class="caret"></span></a>
-          <ul class="dropdown-menu menu-themes" role="menu">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="temasDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Temas
+          </a>
+          <ul class="dropdown-menu menu-themes" aria-labelledby="temasDrop">
           {% for theme in site.themes %}
-            <li><a class="active" href="{{site.baseurl}}{{ theme.url }}">{{ theme.name }}</a></li>
+            <li><a class="dropdown-item active" href="{{site.baseurl}}{{ theme.url }}">{{ theme.name }}</a></li>
           {% endfor %}
           </ul>
         </li>
       </ul>
-
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="{{site.baseurl}}/about/">About</a></li>
-        <li><a href="{{site.baseurl}}/data/">Data</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Share <span class="caret"></span></a>
-          <ul class="dropdown-menu menu-share" role="menu">
-           <li><a href="https://twitter.com/share?text=Explore how global infrastructure links us all with the Connectivity Atlas.&url={{ site.url }}{{ site.baseurl }}" target="_blank">Twitter</a></li>
-           <li><a href="https://www.facebook.com/sharer/sharer.php" target="_blank">Facebook</a></li>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="{{site.baseurl}}/about/">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{site.baseurl}}/data/">Dados</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="compartilharDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Compartilhar
+          </a>
+          <ul class="dropdown-menu menu-share dropdown-menu-end" aria-labelledby="compartilharDrop">
+           <li><a class="dropdown-item" href="https://twitter.com/share?text=Explore como a infraestrutura global conecta todos nós com o Atlas de Conectividade.&url={{ site.url }}{{ site.baseurl }}" target="_blank">Twitter</a></li>
+           <li><a class="dropdown-item" href="https://www.facebook.com/sharer/sharer.php" target="_blank">Facebook</a></li>
           </ul>
         </li>
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>
+  </div>
 </nav>
 
   {{content}}
 
 
-<div class="loader">Loading...</div>
+<div class="loader">Carregando...</div>
+<div id="source-meta"></div>
 
  <script src="{{site.baseurl}}/js/app.js"></script>
   </body>

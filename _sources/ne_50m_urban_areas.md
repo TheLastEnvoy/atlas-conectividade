@@ -1,5 +1,5 @@
 ---
-title: Urban areas
+title: Áreas Urbanas
 attribution: Natural Earth
 attribution-url: http://www.naturalearthdata.com/downloads/
 id: ne_50m_urban_areas

@@ -1,4 +1,5 @@
 ---
-name: Communications
+layout: theme
+name: Comunicações
 themes: communications
 ---

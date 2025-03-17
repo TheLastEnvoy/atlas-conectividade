@@ -1,4 +1,5 @@
 ---
-name: Energy
+layout: theme
+name: Energia
 themes: energy
 ---

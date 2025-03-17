@@ -1,5 +1,5 @@
 ---
-title: Global Oil Pipelines
+title: Oleodutos Globais
 attribution: Enhanced from the Harvard CGA Oil Dataset
 attribution-url: http://maps.cga.harvard.edu/oil/
 id: global_oil

@@ -1,13 +1,13 @@
 ---
-title: Ports
+title: Portos
 attribution: Natural Earth
 attribution-url: http://www.naturalearthdata.com/downloads/
 id: ne_10m_ports
-source-url: mapbox://mappingfuture.dfxnc1hm
+source-url: mapbox://mappingfuture.actrqrvj
 layer: ne_10m_ports
 tags:
-  - symbol
+  - point
 themes: transportation, all
-icon-image: 'night-lighthouse-12'
-icon-opacity: 0.6
+icon-image: triangle
+icon-size: 8
 ---

@@ -1,4 +1,5 @@
 ---
-name: Transportation
+layout: theme
+name: Transporte
 themes: transportation
 ---

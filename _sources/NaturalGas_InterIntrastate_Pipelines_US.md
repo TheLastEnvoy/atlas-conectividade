@@ -1,5 +1,5 @@
 ---
-title: US Natural Gas
+title: Gasodutos de Gás Natural dos EUA
 attribution: EIA
 attribution-url: http://www.eia.gov/maps/layer_info-m.cfm
 id: NaturalGas_InterIntrastate_Pipelines_US

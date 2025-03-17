@@ -1,31 +1,31 @@
-# Connectivity Atlas
+# Atlas de Conectividade
 
-🚨 This repo does not currently have a maintainer. Contact [@developmentseed](https://github.com/developmentseed/) if you have any questions.
+🚨 Este repositório não possui atualmente um mantenedor. Entre em contato com [@developmentseed](https://github.com/developmentseed/) se tiver alguma dúvida.
 
-### Contributing:
+### Contribuindo:
 
-Please see [contributing.md](https://github.com/developmentseed/connectivity-atlas/blob/develop/contributing.md) for guidelines on contributing. All Pull Requests should be made against the `develop` branch.
+Por favor, consulte [contributing.md](https://github.com/developmentseed/connectivity-atlas/blob/develop/contributing.md) para diretrizes sobre como contribuir. Todos os Pull Requests devem ser feitos contra o branch `develop`.
 
-### Install:
+### Instalação:
 
-- Install [Bundler](http://bundler.io/)
-- `$ bundle install` (this will install Jekyll and other libraries needed for the site)
+- Instale o [Bundler](http://bundler.io/)
+- `$ bundle install` (isso instalará o Jekyll e outras bibliotecas necessárias para o site)
 
-### Serve the site locally:
+### Servindo o site localmente:
 
-`$ bundle exec jekyll serve --baseurl '' -w` -- this rebuilds the site whenever a change is made, you will need to reload
+`$ bundle exec jekyll serve --baseurl '' -w` -- isso reconstrói o site sempre que uma alteração é feita, você precisará recarregar
 
-### Deployment:
+### Implantação:
 
-The site is served via GitHub Pages based on content within the `gh-pages` branch.
+O site é servido via GitHub Pages com base no conteúdo do branch `gh-pages`.
 
 
-### Data sources:
+### Fontes de dados:
 
-Maps are served via [mapbox-gl.js](https://github.com/mapbox/mapbox-gl-js/). Additional data sources can be added by creating an item in the Sources collection and updating the [YAML](http://jekyllrb.com/docs/frontmatter/) front matter.
-- Source filenames should match the id of the source.
-- Vector styles specific to the source should be included.
-- The source-url should be the location of the vector tile set.
+Os mapas são servidos via [mapbox-gl.js](https://github.com/mapbox/mapbox-gl-js/). Fontes de dados adicionais podem ser adicionadas criando um item na coleção Sources e atualizando o front matter [YAML](http://jekyllrb.com/docs/frontmatter/).
+- Os nomes dos arquivos de origem devem corresponder ao ID da fonte.
+- Estilos vetoriais específicos para a fonte devem ser incluídos.
+- A source-url deve ser a localização do conjunto de tiles vetoriais.
 
 ```
 title: US Natural Gas

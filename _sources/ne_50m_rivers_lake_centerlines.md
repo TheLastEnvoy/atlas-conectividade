@@ -1,5 +1,5 @@
 ---
-title: Rivers
+title: Rios e Lagos
 attribution: Natural Earth
 attribution-url: http://www.naturalearthdata.com/downloads/
 id: ne_50m_rivers_lake_centerlines

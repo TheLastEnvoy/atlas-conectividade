@@ -1,13 +1,13 @@
 ---
-title: Airports
+title: Aeroportos
 attribution: Natural Earth
 attribution-url: http://www.naturalearthdata.com/downloads/
 id: ne_10m_airports
-source-url: mapbox://mappingfuture.8qdaq0k9
+source-url: mapbox://mappingfuture.a2xnlu5z
 layer: ne_10m_airports
 tags:
-  - symbol
+  - point
 themes: transportation, all
-icon-image: 'night-airport-12'
-icon-opacity: 0.6
+icon-image: airport
+icon-size: 6
 ---
