@@ -1,7 +1,7 @@
 # Site settings
 title: Atlas de Conectividade | Development Seed
-baseurl: ""
-url: "https://seu-usuario-github.github.io"
+baseurl: "/atlas-conectividade"
+url: "https://thelastenvoy.github.io"
 
 # Build settings
 markdown: kramdown
