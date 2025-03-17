@@ -25,8 +25,11 @@ document.addEventListener('DOMContentLoaded', function() {
         showDebugInfo('Modo de depuração ativado');
     }
     
+    // Obter o baseUrl para carregar recursos corretamente
+    const baseUrl = '/atlas-conectividade';
+    
     // Carregar o estilo
-    fetch('/js/style_hard.json')
+    fetch(`${baseUrl}/js/style_hard.json`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Erro ao carregar o estilo: ' + response.status);
@@ -157,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                         if (layerId) {
                             features.style.display = 'block';
-                            features.innerHTML = title + '<br><a class="btn btn-primary btn-sm" href="/' + layerId + '">Ver fonte</a>';
+                            features.innerHTML = title + '<br><a class="btn btn-primary btn-sm" href="' + baseUrl + '/' + layerId + '">Ver fonte</a>';
                         }
                     }
                 }
